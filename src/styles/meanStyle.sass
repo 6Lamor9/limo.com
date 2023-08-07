@@ -1,0 +1,41 @@
+/* methods of centering an element */
+.center1
+    display: flex
+    justify-content: center
+    align-items: center
+.center2
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+.center3
+    display: grid
+    place-items: center
+    align-content: center
+
+.flex-center-v
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    flex-direction: column
+
+
+/* debug tool */
+.db
+    border: 1px solid red
+.h
+    display: none
+.sm
+    @media (min-width: 768px)
+      display: none !important
+.sd
+    @media (max-width: 768px)
+      display: none !important
+// sections style
+.section
+    min-height: 100vh
+// style scroll bar
+::-webkit-scrollbar
+    width: 0px
+    height: 0px
+    background-color: #000

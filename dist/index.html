@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="light" data-theme="night">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" type="image/svg+xml" href="/logo.svg">
+		<meta name="generator" content="Astro v2.8.5">
+		<title>Home</title>
+	<link rel="stylesheet" href="./_astro/index.f2a35d16.css" /></head>
+	<body class="dark:bg-black  ">
+		<style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var d;{let h={0:t=>t,1:t=>JSON.parse(t,a),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,a)),5:t=>new Set(JSON.parse(t,a)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},a=(t,e)=>{if(t===""||!Array.isArray(e))return e;let[r,n]=e;return r in h?h[r](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(d=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=async()=>{var o;if(!this.hydrator||!this.isConnected)return;let e=(o=this.parentElement)==null?void 0:o.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),n={},c=this.querySelectorAll("template[data-astro-template]");for(let s of c){let i=s.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove())}for(let s of r){let i=s.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[s.getAttribute("name")||"default"]=s.innerHTML)}let l=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),a):{};await this.hydrator(this)(this.Component,l,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((e,r)=>{r.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}Astro[r](async()=>{let n=this.getAttribute("renderer-url"),[c,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),o=this.getAttribute("component-export")||"default";if(!o.includes("."))this.Component=c[o];else{this.Component=c;for(let s of o.split("."))this.Component=this.Component[s]}return this.hydrator=l,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},d.observedAttributes=["props"],d))}})();</script><astro-island uid="Z1Osxdl" component-url="/_astro/DarkModeswitcher.e80fc6aa.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeswitcher&quot;,&quot;value&quot;:true}"></astro-island>
+		<!-- <Clock client:load /> -->
+
+		
+<div class="navbar bg-base-100 font-os z-50  fixed top-0 ">
+    <div class="navbar-start ">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
+        </label>
+        <ul tabindex="0" class="menu menu-lg   decoration-slice text-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="/">home</a></li><li><a href="/services">services</a></li><li><a href="/fleet">Limo Fleet</a></li><li><a href="/book">Book a Limo</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost normal-case text-2xl font-ax">Limo Line</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal text-lg  px-1">
+        <li><a href="/">home</a></li><li><a href="/services">services</a></li><li><a href="/fleet">Limo Fleet</a></li><li><a href="/book">Book a Limo</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end ">
+      <a class="btn bg-secondary text-black">book a ride</a>
+    </div>
+  </div>
+<div class="hero min-h-screen bg-center bg-cover astro-JOKDYHLG" id="headline">
+    <div class="hero-overlay bg-opacity-60 astro-JOKDYHLG"></div>
+    <!-- <div class="overlay w-full h-full"></div> -->
+    <div class=" hero-content  text-neutral-content astro-JOKDYHLG">
+      <div class=" w-screen  astro-JOKDYHLG">
+        <div class="astro-JOKDYHLG">
+          <h1 class="mb-5 text-2xl md:text-3xl lg:text-4xl font-dl md:max-w-lg astro-JOKDYHLG">the best airport Limousine service in the world</h1>
+          <p class="mb-5 text-lg font-es astro-JOKDYHLG">We are the best in the world</p>
+          <button class="btn  btn-secondary font-os astro-JOKDYHLG">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="hero  bg-base font-es">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h2 class="text-xl font-bold">welcome to reyad airport limo service</h2>
+      </div>
+    </div>
+  </div>
+
+	</body></html>

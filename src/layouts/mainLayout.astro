@@ -1,0 +1,32 @@
+---
+
+interface Props {
+	title: string;
+}
+
+import DarkModeswitcher from "../components/utils/DarkModeswitcher.svelte";
+import Clock from "../components/utils/clock.svelte";
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="light" data-theme="night">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="dark:bg-black  ">
+		<DarkModeswitcher client:only/>
+		<!-- <Clock client:load /> -->
+
+		<slot />
+	</body>
+</html>
+<style is:global lang="sass">
+@import ../styles/fonts
+@import ../styles/meanStyle
+</style>
