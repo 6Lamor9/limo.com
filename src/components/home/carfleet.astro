@@ -1,0 +1,22 @@
+---
+import Carcard from "./carcard.astro";
+const pd = {
+    maintext: "MSA airport fleet",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repellat eos ipsam, vitae, rem placeat pariatur maiores perferendis obcaecati consequatur eligendi consequuntur possimus",
+}
+---
+<div class="center3 mb-16">
+    <div class=" p-4 md:p-6 lg:p-8 w-full  ">
+        <div class=" hero-overlay bg-opacity-50"></div>
+        <h1 class="text-3xl md:text-4xl lg:text-6xl   font-bold font-es">{pd.maintext}</h1>
+        <p class="text-sm md:text-base ">{pd.text}</p>
+    </div>
+    <div class="center3 md:grid-cols-3 w-screen  mob:carousel mob:carousel-center mob:rounded-box p-4 md:w-10/12 gap-4">
+        <Carcard/>
+        <Carcard/>
+        <Carcard/>
+        <Carcard/>
+        <Carcard/>
+        <Carcard/>
+    </div>
+</div>

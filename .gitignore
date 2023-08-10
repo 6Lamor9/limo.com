@@ -6,7 +6,8 @@
 # dependencies
 node_modules/
 public
-
+notused
+video
 
 
 # logs

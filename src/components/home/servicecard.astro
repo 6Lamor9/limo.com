@@ -1,9 +1,9 @@
 ---
 const {text,title,image} = Astro.props
 ---
-  <div class="card servercard w-full inline-flex  rounded-none md:flex-row md:gap-4 bg-base-100 md:max-h-48  shadow-xl">
+  <div class="card servercard w-full inline-flex  rounded-none md:flex-row md:gap-4 bg-base-100 md:max-h-48 ">
     <figure><img  src=`images/${image}` alt="Shoes" class="md:h-48 sm:h-64 w-full" /></figure>
-    <div class="card-body">
+    <div class="card-body bg-secondary">
       <h2 class="card-title">{title}</h2>
       <p class="md:max-w-sm">{text}</p>
       <div class="card-actions justify-end">
