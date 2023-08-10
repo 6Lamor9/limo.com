@@ -1,13 +1,84 @@
 ---
-
 const pd = {
-    fisttextinfo:"welcome to reyad airport limo service",
-}
+  fisttextinfo: "welcome to reyad airport limo service",
+  text2: "minneapolis limo service",
+  text3:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt officiis sit quod consequuntur animi voluptas magnam voluptatum iste modi fugit sunt assumenda quo quia optio, magni harum facilis alias?",
+  text4: "call - 612-987-5888",
+  cardinfo: [
+    {
+      title: "MSP Airport Limo",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reiciendis placeat ex nisi provident voluptate",
+      image: "car1.jpg",
+    },
+    {
+      title: "minneapolis Limo",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reiciendis placeat ex nisi provident voluptate",
+      image: "car2.jpg",
+    },
+    {
+      title: "Mayo clinic limo",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reiciendis placeat ex nisi provident voluptate",
+      image: "car3.jpg",
+    },
+  ],
+};
+import Servicecard from "./servicecard.astro";
 ---
-<div class="hero  bg-base font-es">
+
+<script>
+  let first = true;
+  const observer = new IntersectionObserver((enters) => {
+    enters.forEach((entry) => {
+      if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }else{
+      entry.target.classList.remove("show");
+    }
+    });
+  });
+  const obj = document.querySelectorAll(".servercard");
+  // toggle the class show
+
+  obj.forEach((e) => {
+    observer.observe(e);
+  });
+  
+</script>
+<main class="bg-base-100 overflow-hidden">
+  <div class="hero bg-base font-es">
     <div class="hero-content text-center">
       <div class="max-w-md">
         <h2 class="text-xl font-bold">{pd.fisttextinfo}</h2>
       </div>
     </div>
   </div>
+  <div>
+    <div class="container min-h-[80vh] mx-auto">
+      <div class="flex md:gap-4 lg:p-8 mob:flex-col">
+        <div class="w-full md:w-2/5">
+          <div class="p-4 inline-flex gap-4 justify-center h-full flex-col">
+            <h2 class="text-3xl font-bold lg:text-5xl">{pd.text2}</h2>
+            <p class="text-lg">{pd.text3}</p>
+            <p class="text-lg md:text-xl text-yellow-500 text-center">
+              {pd.text4}
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-4 flex-col justify-evenly">
+          {
+            pd.cardinfo.map((item) => {
+              return (
+                <Servicecard
+                  title={item.title}
+                  image={item.image}
+                  text={item.text}
+                />
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

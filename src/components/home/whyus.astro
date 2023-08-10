@@ -1,0 +1,119 @@
+---
+import Card from "./card2.astro";
+import Airplain from '../svg/airplen.astro'
+import People from '../svg/people.astro'
+import Calender from "../svg/calender.astro";
+const pd = {
+  image: "images/whyuscar.jpg",
+  title:"The Best Airport Limo Service",
+  cards:[
+    {
+        image:"images/card2i3.jpg",
+        title:"any where",
+        text:"Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        image:"images/card2i1.jpg",
+        title:"any time",
+        text:"Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        image:"images/card2i2.jpg",
+        title:"best serves",
+        text:"Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+    },
+  ],
+  maincard:{
+    title:"serving msp airport and surrounding areas",
+  text:"lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, praesentium sed nobis itaque vel commodi? Perferendis, cumque quasi. In similique ut praesentium assumenda consequatur incidunt quam beatae quod veniam ipsa?"
+  }
+};
+---
+
+<script>
+  function scollr(classname, elemint) {
+    const observer = new IntersectionObserver((enters) => {
+      enters.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(classname);
+        } else {
+          entry.target.classList.remove(classname);
+        }
+      });
+    });
+    const obj = document.querySelector(elemint);
+    // toggle the class show
+    observer.observe(obj);
+  }
+scollr("caroverlyshow",".caroverly")
+
+const cardlist = document.querySelectorAll(".mycard2");
+cardlist.forEach((card) => {
+    let cardnumber = Array.from(cardlist).indexOf(card) + 1;
+  scollr("mycard2show", `.mycard2:nth-child(${cardnumber})`);
+});
+
+
+</script>
+<div class="w-full h-48 bg-black center1">
+  <div
+    class="h-full caroverly bg-contain md:bg-cover w-full md:w-1/2 bg-no-repeat"
+  >
+  </div>
+</div>
+<div class=" pb-4 md:py-4 text-center text-white font-tp text-xl md:text-3xl lg:text-4xl bg-black text">
+<h1>{pd.title}</h1>
+</div>
+<div class="flex mob:flex-col justify-center overflow-hidden gap-4 md:gap-8 items-center">
+    {
+        pd.cards.map((item) => {
+          return (
+            <Card
+              title={item.title}
+              image={item.image}
+              text={item.text}
+            />
+          );
+        })
+      }
+</div>
+<div class="flex justify-evenly mob:flex-col items-center min-h-[80vh]">
+    <video src="video/test.mp4" controls  class="md:w-2/5" ></video>
+      <div class="card  w-full md:w-2/5 rounded-none bg-secondary text-primary-content">
+        <div class="card-body">
+          <h2 class="card-title text-2xl font-tp font-bold lg:text-3xl">{pd.maincard.title}</h2>
+          <p>{pd.maincard.text}</p>
+          <div id="f2-10" class=" h-36 grid gap-2 grid-cols-3 mt-8 w-full">
+            <div class="outline rounded-lg center1 flex-col  outline-base">
+              <People/>
+              <h2 class="font-tp font-bold lg:text-xl">trusted by</h2>
+              <h3 class="  text-amber-500 font-bold font-hd text-xl">400+</h3>
+            </div>
+            <div class="outline  rounded-lg center1 flex-col  outline-base">
+              <Airplain/>
+              <h2 class="font-tp font-bold lg:text-xl">Airport rides</h2>
+              <h3 class="  text-amber-500 font-bold font-hd text-xl">750+</h3>
+            </div>
+            <div class="outline  rounded-lg center1 flex-col  outline-base">
+              <Calender/>
+              <h2 class="font-tp font-bold lg:text-xl">total booking</h2>
+              <h3 class="  text-amber-500 font-bold font-hd text-xl">1000+</h3>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+<style lang="sass">
+  .caroverly
+    background-image: url("images/whyuscar.jpg")
+    background-position: 50% 35%
+    opacity: 0
+    transition: all 2s
+    filter: blur(10px)
+  .caroverlyshow
+    opacity: 1
+    filter: blur(0px)
+</style>

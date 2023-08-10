@@ -6,23 +6,13 @@ const pd = {
   background:""
 }
 --- 
-<div class="hero min-h-screen bg-center bg-cover" id="headline">
-    <div class="hero-overlay bg-opacity-60" 
-    ></div>
-    <!-- <div class="overlay w-full h-full"></div> -->
-    <div class=" hero-content  text-neutral-content">
-      <div class=" w-screen ">
-        <div>
-          <h1 class="mb-5 text-2xl md:text-3xl lg:text-4xl font-dl md:max-w-lg">{pd.headline}</h1>
-          <p class="mb-5 text-lg font-es">{pd.headtext}</p>
-          <button class="btn  btn-secondary font-os">{pd.botton}</button>
-        </div>
-      </div>
+<div class="hero min-h-screen" style="background-image: url('images/image3.jpg')">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-2xl md:text-3xl lg:text-4xl font-dl md:max-w-lg">{pd.headline}</h1>
+      <p class="mb-5 text-lg font-es">{pd.headtext}</p>
+      <button class="btn  btn-secondary font-os">{pd.botton}</button>
     </div>
   </div>
-<style lang="sass">
-#headline
-  background-image: url('images/image3.jpg')
-  // .hero-overlay
-  //     background-image: url("/images/thecar1.png")
-</style>
+</div>
